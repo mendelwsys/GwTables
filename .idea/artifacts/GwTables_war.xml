@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="GwTables:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/GwTables_war</output-path>
+    <root id="archive" name="sg02.war">
+      <element id="artifact" artifact-name="GwTables:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="poi" />
+          <element id="library" level="application" name="poi3.11" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

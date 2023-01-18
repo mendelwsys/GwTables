@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="smartgwt50">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../gwt/smartgwt-5.0p/smartgwt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../gwt/smartgwt-5.0p/smartgwt-skins.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../gwt/smartgwt-5.0p/smartgwt.jar!/" />
+    </SOURCES>
+  </library>
+</component>

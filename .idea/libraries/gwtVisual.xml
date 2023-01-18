@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="gwtVisual">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../gwt/gwt-visualization-1.1.2/gwt-visualization.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../gwt/gwt-visualization-1.1.2/gwt-visualization-noredist.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../gwt/gwt-visualization-1.1.2/gwt-visualization-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../gwt/gwt-visualization-1.1.2/gwt-visualization.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../gwt/gwt-visualization-1.1.2/gwt-visualization-noredist.jar!/" />
+    </SOURCES>
+  </library>
+</component>

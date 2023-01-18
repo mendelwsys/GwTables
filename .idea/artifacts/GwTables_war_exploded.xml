@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="GwTables:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/GwTables_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="GwTables/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="GwTables" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="gwtVisual" />
+          <element id="library" level="project" name="common" />
+          <element id="library" level="application" name="gwtServer" />
+          <element id="library" level="project" name="JWS" />
+          <element id="library" level="application" name="poi3.11" />
+          <element id="library" level="application" name="SmartGWT3" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="GwTables/gwt/GWT" />
+    </root>
+  </artifact>
+</component>
