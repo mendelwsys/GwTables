@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>undefined vs null in javascript</title>
+    <script type="text/javascript">
+        function getUa()
+        {
+	var test;
+        if(test == null)
+        {
+            alert("The variable [test] equals [undefined] or [null]:"+test);
+        }
+        var test1 = null;
+        if(test1 == null)
+        {
+            alert("The variable [test1] equals [undefined] or [null]:" +test1);
+        }
+        var test2 = null;
+        if(test2 === null)
+        {
+            alert("The variable [test2] equals [null] and not [undefined], because we use the operator [===] and not [==]");
+        }
+        var test3;
+        if(test3 === undefined)
+        {
+            alert("The variable [test3] equals [undefined] and not [null], because we use the operator [===] and not [==]");
+        }
+        }
+        alert(getUa());
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <script>
+
+
+
+	function Animal()
+	{
+	   this.X=0;
+	   this.Y=0;
+	   this.arr= new Array();
+
+		this.run = function(dx,dy)
+		{
+			this.X+=dx;
+			this.Y+=dy;
+			return this;
+		};
+
+	};
+
+	Animal.prototype =  
+	{
+	 
+  	   eat:function( o )
+	   {
+		this.arr.push(o);
+		return " eat:"+o;
+	
+	   }
+	};
+
+
+	var x=new Animal();
+	alert(x.eat('1')+x.arr.pop());	
+
+  </script>
+
+</body>
+</html>

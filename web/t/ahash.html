@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Check Reflection Content</title>
+</head>
+<script>
+
+
+var h = new Object(); // or just {}
+h['wthead.jsp'] = 2;
+h['data.jsp'] = 1;
+h['thead.jsp'] = 3;
+
+
+// show the values stored
+for (var k in h) 
+{
+    // use hasOwnProperty to filter out keys from the Object.prototype
+    if (h.hasOwnProperty(k)) {
+        alert('key is: ' + k + ', value is: ' + h[k]);
+    }
+}
+
+</script>
+
+</head>
+<body>
+	<H1>HI</H1>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+    <script src="js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        global.window = window;
+        global.$ = $;
+        var desktop = true;
+        var closed = false;
+        if (!global.title) global.title = "1";
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/require.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+</head>
+<body id="mybody">
+<div class="maindiv">
+<div class="myvisible">
+    <div id="top-titlebar" class="top-titlebar myhidden">
+        <div class="top-titlebar-text">Заголовок</div>
+        <div class="top-titlebar-close-button"></div>
+        <div class="top-titlebar-divider"></div>
+        <div class="top-titlebar-minimize-button"></div>
+    </div>
+</div>
+<div class="loading" id="loading"></div>
+<script type="text/javascript">
+    if (!global.first) {
+        window.setTimeout(function () {
+            init();
+            global.first = true;
+        }, 1000);
+    }
+    function getParameterByName(name) {
+        var match = new RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    function openFrame() {
+        var id = getParameterByName('id');
+        if (!id)
+            $('.container').replaceWith('<iframe style=\"display:none;\" class=\"report\" onload=\"this.style.display = \'block\';  $(\'.loading\').css(\'display\', \'none\');\" id="informer" src=\"' + global.baseUrl + '/HelloWorld.html?isdesc=true\" frameborder="no" scrolling="no"></iframe>');
+        else
+            $('.container').replaceWith('<iframe class=\"report\" style=\"display:none;\" onload=\"this.style.display = \'block\';  $(\'.loading\').css(\'display\', \'none\');\" id="informer" src=\"' + global.baseUrl + '/HelloWorld.html?informer=' + id + '\" frameborder="no" scrolling="no"></iframe>');
+    }
+    function setTitle(title) {
+        var v = $('.top-titlebar-text');
+        v.replaceWith('<div class = \"top-titlebar-text\">' + title + '</div>');
+    }
+    function setWindowPosition(id, state, zoom, x, y) {
+        setWindowPosition2(id, state, zoom, x, y);
+    }
+    function rWW(id, h, w) {
+        setWindowSize(id, h, w);
+    }
+    window.onload = function () {
+        window.setTimeout(function () {
+            openFrame();
+        }, 1000);
+    }
+</script>
+<div class="container"></div>
+</div>
+</body>
+</html>

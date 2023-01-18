@@ -1,0 +1,203 @@
+<svg id="svg4528" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" width = "100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" onload="startup(evt)">
+
+<script type="text/ecmascript"><![CDATA[
+function setEventTitle(eventtitle,eventtitleshort)
+{
+document.getElementById("eventtextextended").firstChild.innerHTML = eventtitle;
+document.getElementById("eventtextshort").firstChild.innerHTML = eventtitleshort;
+}
+
+function setRoadTitle(roadtitle,roadtitleshort)
+{
+document.getElementById("roadtextextended").firstChild.innerHTML = roadtitle;
+document.getElementById("roadtextshort").firstChild.innerHTML = roadtitleshort;
+}
+
+
+function setOverAllStatus(status)
+{
+if (status === 1)
+{
+document.getElementById("smallinformer").style.fill = 'url(#greengradient)';
+}
+else if (status === 2)
+{
+document.getElementById("smallinformer").style.fill = 'url(#yellowgradient)';
+}
+else if (status === 3)
+{
+document.getElementById("smallinformer").style.fill = 'url(#redgradient)';
+}
+}
+
+function setParamsNum(num)
+{
+for (i = 0 ;i< num;i++)
+{
+document.getElementById("param"+(i+1)+"full").style.display = 'block';
+if (i===num-1)
+{
+document.getElementById("param"+(i+1)).style.fill = 'even-odd';
+document.getElementById("param"+(i+1)).style.filter = 'url(#filter4630)';
+}
+}
+}
+
+function startup(evt)
+{
+setEventTitle("Отказы ТС","ОТС");
+setOverAllStatus(2);
+setRoadTitle("Октябрьская","ОКТ");
+setParamsNum(3);
+setParamValueAndStatus(1,"ПАСС:10",0);
+setParamValueAndStatus(2,"ГРУЗ:100",2);
+setParamValueAndStatus(3,"ПРИГ:1000",3);
+}
+
+function setParamValueAndStatus(paramnum,value,status)
+{
+setParamValue(paramnum,value);
+setParamStatus(paramnum,status);
+}
+
+function setParamValue(paramnum,paramvalue)
+{
+document.getElementById("paramtext"+paramnum).firstChild.innerHTML = paramvalue;
+}
+
+function setParamStatus(paramnum,status)
+{
+if (status === 0 )
+{
+document.getElementById("param"+paramnum).style.fill = '#fff';
+}
+else if (status===1)
+{
+document.getElementById("param"+paramnum).style.fill = 'url(#paramgradientgreen)';
+}
+else if (status===2)
+{
+document.getElementById("param"+paramnum).style.fill = 'url(#paramgradientyellow)';
+}
+else if (status === 3)
+{
+document.getElementById("param"+paramnum).style.fill = 'url(#paramgradientred)';
+}
+}
+ 
+]]></script>
+ <defs id="defs4530">
+  <linearGradient id="yellowgradient" y2="150" gradientUnits="userSpaceOnUse" x2="150" y1="50" x1="50">
+   <stop id="stop7369" style="stop-color:#ff0" offset="0"/>
+   <stop id="stop7371" style="stop-color:#fff" offset="1"/>
+  </linearGradient>
+  <filter id="filter5075-0-1" style="color-interpolation-filters:sRGB" height="1.51" width="1.36" y="-.11" x="-.09">
+   <feFlood id="feFlood5077-81-3" result="flood" flood-color="rgb(0,0,0)"/>
+   <feComposite id="feComposite5079-3-7" operator="in" result="composite1" in2="SourceGraphic" in="flood"/>
+   <feGaussianBlur id="feGaussianBlur5081-9-8" stdDeviation="3" result="blur" in="composite1"/>
+   <feOffset id="feOffset5083-8-2" result="offset" dx="4.5" dy="4.5"/>
+   <feComposite id="feComposite5085-1-6" operator="over" result="composite2" in2="offset" in="SourceGraphic"/>
+  </filter>
+  <linearGradient id="param1gradient" y2="200" gradientUnits="userSpaceOnUse" x2="170"  y1="200" x1="80">
+   <stop id="stop4405" style="stop-color:#008000" offset="0"/>
+   <stop id="stop4407" style="stop-color:#ffd42a" offset="0.5"/>
+   <stop id="stop4409" style="stop-color:#f00" offset="1"/>
+  </linearGradient>
+  <linearGradient id="param2gradient" y2="200" gradientUnits="userSpaceOnUse" x2="210"  y1="200" x1="50">
+   <stop id="stop4415" style="stop-color:#008000" offset="0"/>
+   <stop id="stop4417" style="stop-color:#ffd42a" offset="0.5"/>
+   <stop id="stop4419" style="stop-color:#f00" offset="1"/>
+  </linearGradient>
+  <linearGradient id="param3gradient" y2="200" gradientUnits="userSpaceOnUse" x2="240" y1="200" x1="16">
+   <stop id="stop5060" style="stop-color:#008000" offset="0"/>
+   <stop id="stop5064" style="stop-color:#ffd42a" offset=".481"/>
+   <stop id="stop5062" style="stop-color:#f00" offset="1"/>
+  </linearGradient>
+<linearGradient id="paramgradientgreen" y2="200" gradientUnits="userSpaceOnUse" x2="170"  y1="200" x1="80">
+   <stop id="stop44052" style="stop-color:#008000" offset="0"/>
+<stop id="stop73872" style="stop-color:#d7f4d7" offset="1"/>
+  </linearGradient>
+  <linearGradient id="paramgradientyellow" y2="200" gradientUnits="userSpaceOnUse" x2="210"  y1="200" x1="50">
+   <stop id="stop44172" style="stop-color:#ffd42a" offset="0"/>
+<stop id="stop73873" style="stop-color:#fff" offset="1"/>
+  </linearGradient>
+  <linearGradient id="paramgradientred" y2="200" gradientUnits="userSpaceOnUse" x2="240" y1="200" x1="16">
+   <stop id="stop50622" style="stop-color:#f00" offset="0"/>
+<stop id="stop73874" style="stop-color:#fff" offset="1"/>
+  </linearGradient>
+  <linearGradient id="greengradient" y2="150" gradientUnits="userSpaceOnUse" y1="50" x2="200" x1="100">
+   <stop id="stop7385" style="stop-color:#37c837" offset="0"/>
+   <stop id="stop7387" style="stop-color:#fff" offset="1"/>
+  </linearGradient>
+  <filter id="filter5063-8" style="color-interpolation-filters:sRGB" height="1.38" width="1.47" x="-.18">
+   <feFlood id="feFlood5065-4" result="flood" flood-color="rgb(0,0,0)"/>
+   <feComposite id="feComposite5067-12" operator="in" result="composite1" in2="SourceGraphic" in="flood"/>
+   <feGaussianBlur id="feGaussianBlur5069-4" stdDeviation="3" result="blur" in="composite1"/>
+   <feOffset id="feOffset5071-6" result="offset" dx="4.5" dy="4.5"/>
+   <feComposite id="feComposite5073-1" operator="over" result="composite2" in2="offset" in="SourceGraphic"/>
+  </filter>
+  <linearGradient id="redgradient" y2="150" gradientUnits="userSpaceOnUse" y1="50" x2="200" x1="100">
+   <stop id="stop5612" style="stop-color:#f55" offset="0"/>
+   <stop id="stop5614" style="stop-color:#f9f9f9" offset="1"/>
+  </linearGradient>
+  <filter id="filter5063-8-7" style="color-interpolation-filters:sRGB" height="1.38" width="1.47" x="-.180">
+   <feFlood id="feFlood5065-4-1" result="flood" flood-color="rgb(0,0,0)"/>
+   <feComposite id="feComposite5067-12-71" operator="in" result="composite1" in2="SourceGraphic" in="flood"/>
+   <feGaussianBlur id="feGaussianBlur5069-4-7" stdDeviation="3" result="blur" in="composite1"/>
+   <feOffset id="feOffset5071-6-0" result="offset" dx="4.5" dy="4.5"/>
+   <feComposite id="feComposite5073-1-8" operator="over" result="composite2" in2="offset" in="SourceGraphic"/>
+  </filter>
+  <filter id="filter4630" style="color-interpolation-filters:sRGB">
+   <feFlood id="feFlood4632" result="flood" flood-color="rgb(0,0,0)"/>
+   <feComposite id="feComposite4634" operator="in" result="composite1" in2="SourceGraphic" in="flood"/>
+   <feGaussianBlur id="feGaussianBlur4636" stdDeviation="5.2" result="blur" in="composite1"/>
+   <feOffset id="feOffset4638" result="offset" dx="6" dy="6"/>
+   <feComposite id="feComposite4640" operator="over" result="composite2" in2="offset" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g id="layer1">
+<g id="collapsedinformer" >
+  <path id="smallinformer" style="filter:url(#filter5063-8);stroke:#000;fill:url(#greengradient)" d="m150 100a22.9 22.1 0 0 1 -22.9 22.1 22.9 22.1 0 0 1 -22.9 -22.1 22.9 22.1 0 0 1 22.9 -22.1 22.9 22.1 0 0 1 22.9 22.1z"/>
+  <text id="roadtextshort" text-anchor="middle" style="letter-spacing:0px;font-size:40px;word-spacing:0px;font-family:sans-serif;line-height:125%;fill:#000000" xml:space="preserve" y="140" x="129"><tspan id="tspan7185-2-4-9-18-1-16" x="129" style="font-size:12.5px;font-weight:bold;line-height:125%;font-family:sans-serif" y="140">Сев.</tspan></text>
+  <text id="eventtextshort" text-anchor="middle" style="font-size:12.5px;font-weight:bold;letter-spacing:0px;line-height:125%;word-spacing:0px;font-family:sans-serif;fill:#000000" xml:space="preserve" y="70" x="128"><tspan id="tspan5536-1" x="128" y="70">Предупреждения</tspan></text>
+<animateMotion id="move" begin="click"
+    from="0,0" to="0,100"
+    dur="0.5s" fill="freeze"/>
+<set id="showext" xlink:href="#expandedinformer" attributeName="display" attributeType="CSS" to="block" begin="hide3.end" dur="0.1s" fill="freeze"/>
+<animate id ="hide3" begin="move.end" attributeName="opacity" attributeType="XML" 
+       dur="0.5s" from="1" to="0" fill="freeze"/>
+
+</g>
+
+<g id="expandedinformer" style="display:none;">
+<set id="hide2" attributeName="display" attributeType="CSS" to="none" begin="click" dur="0.1s" fill="freeze"/>
+<!--<set id="show2" xlink:href="#collapsedinformer" attributeName="display" attributeType="CSS" to="block" begin="hide2.end" dur="1s" fill="freeze"/> -->
+<animate id ="show2" begin="hide2.end" xlink:href="#collapsedinformer" attributeName="opacity" attributeType="XML" 
+       dur="0.5s" from="0" to="1" fill="freeze"/>
+
+<animateMotion id="move" begin="show2.end"
+    from="0,100" to="0,0"
+    dur="0.5s" fill="freeze" xlink:href="#collapsedinformer"/>
+
+
+
+ <g id="param3full" style="display:none">
+ <path id="param3" style="fill-rule:evenodd;filter:url(#filter4630);stroke:#000;stroke-width:1px;fill:url(#paramgradientgreen)" onclick="" d="m16 200a111 111 0 0 1 111 -111 111 111 0 0 1 111 111"/>
+ <text id="paramtext3" text-anchor="middle" style="font-size:12.5px;font-family:sans-serif;letter-spacing:0px;line-height:125%;word-spacing:0px;fill:#000000" xml:space="preserve" y="110" x="125"><tspan id="tspan4148-60" x="125" style="font-size:12.5px;font-weight:bold;line-height:125%;font-family:sans-serif;fill:#000000" y="110">ПАСС:1</tspan></text>
+</g>
+<g id = "param2full" style="display:none">
+  <path id="param2" style="stroke:#000;stroke-width:1;fill:url(#paramgradientyellow)" d="m50 200a77.7 77.3 0 0 1 77.7 -77.3 77.7 77.3 0 0 1 77.7 77.3h-77.7z"/>
+<text id="paramtext2" text-anchor="middle" style="font-size:12.5px;letter-spacing:0px;line-height:125%;word-spacing:0px;font-family:sans-serif;fill:#000000" xm:space="preserve" y="140" x="125"><tspan id="tspan4148-6-6" x="125" style="font-size:12.5px;font-weight:bold;line-height:125%;font-family:sans-serif" y="140">ПРИГ:0</tspan></text>
+</g>
+<g id="param1full" style="display:none">  
+  <path id="param1" style="stroke:#000;fill:url(#paramgradientred)" d="m80 200a47 47 0 0 1 47 -47 47 47 0 0 1 47 47h-47z"/>
+  <text id="paramtext1" text-anchor="middle" style="font-size:12.5px;letter-spacing:0px;line-height:125%;word-spacing:0px;font-family:sans-serif;fill:#000000" xml:space="preserve" y="170" x="125"><tspan id="tspan4148-6-8-7" x="125" style="font-size:12.5px;font-weight:bold;line-height:125%;font-family:sans-serif" y="170">ГРУЗ:1</tspan></text>
+</g>
+<path id="center" style="stroke:#000;fill:#fff" d="m104 200a22.9 22.1 0 0 1 22.9 -22.1 22.9 22.1 0 0 1 22.9 22.1h-22.9z"/>
+<text id="roadtextextended" text-anchor="middle" style="letter-spacing:0px;font-size:40px;word-spacing:0px;font-family:sans-serif;line-height:125%;fill:#000000" xml:space="preserve" y="240" x="130"><tspan id="tspan7185-2-4-9-18-5-4" x="130" style="font-size:12.5px;font-weight:bold;line-height:125%;font-family:sans-serif" y="240">Северная</tspan></text>
+ <text id="eventtextextended" text-anchor="middle" style="font-size:12.5px;font-weight:bold;letter-spacing:0px;line-height:125%;word-spacing:0px;font-family:sans-serif;fill:#000000" xml:space="preserve" y="80" x="130"><tspan id="tspan5536-5" x="130" y="80">Предупреждения</tspan></text>
+
+
+</g>
+   </g>
+</svg>

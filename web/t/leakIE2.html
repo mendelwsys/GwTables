@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="text/javascript">
+
+createBigArray = function()
+{
+    var rv=new Array(500*1024*1024);
+    for (i=0;i<rv.length;i++)
+        rv[i]=i;
+}
+
+
+eatMemory = function() {
+    var a = null; // the captured closure variable
+    var intervalId = setInterval(function() {
+       a = createBigArray(); // call a method that allocates a lot of memory
+       clearInterval(intervalId); // stop the interval timer
+    }, 100);
+}
+
+function LeakMemory()
+{
+    for (i=0;i<10;i++)
+//        for (j=0;j<80;j++)
+    {
+        eatMemory();
+    }
+
+
+}
+
+</script>
+</head>
+<body>
+<input type="button"
+       value="Memory Leaking Insert 11" onclick="LeakMemory()" />
+</body>
+
+<span>
+<div id='TO_AREA'/>
+<div id='FROM_AREA'/>
+</span>
+
+</html>
+

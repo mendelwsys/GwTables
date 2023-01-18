@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Check Reflection Content</title>
+</head>
+
+<script language="JavaScript">
+
+function maxWindow()
+{
+	window.moveTo(0,0);
+
+
+	if (document.all)
+	{
+		  top.window.resizeTo(screen.availWidth,screen.availHeight);
+	}
+	else if (document.layers||document.getElementById)
+	{
+	  if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth)
+	  {
+	    top.window.outerHeight = screen.availHeight;
+	    top.window.outerWidth = screen.availWidth;
+	  }
+	}
+}
+
+
+function alertVersion() 
+{
+var nVer = navigator.appVersion;
+var nAgt = navigator.userAgent;
+var browserName  = navigator.appName;
+
+
+var fullVersion  = ''+parseFloat(navigator.appVersion); 
+var majorVersion = parseInt(navigator.appVersion,10);
+
+alert(browserName+" "+navigator.appVersion);
+}
+
+function alertSize() {
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+//  window.alert( 'Inner Width = ' + myWidth );
+  window.alert( 'Inner Height = ' + myHeight );
+//  window.alert( 'Screen Width = ' + window.screen.width);
+  window.alert( 'Screen Height = ' + window.screen.height);
+}
+
+</script>
+
+</head>
+<body>
+
+<table>
+<tr><td><button onclick="maxWindow()">Max Sizes</button></tr>
+<tr><td><button onclick="alertSize()">Get Sizes</button></tr>
+<tr><td><button onclick="alertVersion()">Get Browser Version</button></tr>
+
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+
+
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+
+
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+<tr><td>!</td></tr>
+
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+<tr><td>@</td></tr>
+
+
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+<tr><td>?</td></tr>
+
+
+</table>
+</body>
+
+</html>
+
+
+		

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>HelloWorld.html</welcome-file>
+  </welcome-file-list>
+
+    <!--<servlet>-->
+        <!--<servlet-name>dataServletWK</servlet-name>-->
+        <!--<servlet-class>DataServletWK</servlet-class>-->
+        <!--<init-param>-->
+             <!--<param-name>testMode</param-name>-->
+            <!--&lt;!&ndash;<param-value>FULLUPADATE</param-value>&ndash;&gt;-->
+           <!--<param-value>SILENCE</param-value>-->
+            <!--&lt;!&ndash;<param-value>UPDATEREMOVE</param-value>&ndash;&gt;-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+             <!--<param-name>test</param-name>-->
+             <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
+             <!--&lt;!&ndash;<param-name>TESTTABLE</param-name>&ndash;&gt;-->
+             <!--&lt;!&ndash;<param-value>VAGTOR</param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
+        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
+            <!--&lt;!&ndash;<param-name>dsCacheName</param-name>&ndash;&gt;-->
+            <!--&lt;!&ndash;<param-value>jdbc/dbct</param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
+        <!--&lt;!&ndash;<load-on-startup>0</load-on-startup>&ndash;&gt;-->
+    <!--</servlet>-->
+
+    <servlet>
+        <servlet-name>dataServletH</servlet-name>
+        <servlet-class>com.mwlib.tablo.test.hist.DataServletH</servlet-class>
+        <init-param>
+            <param-name>dsCacheName</param-name>
+            <param-value>jdbc/dbcH</param-value>
+        </init-param>
+        <init-param>
+             <param-name>period</param-name>
+             <param-value>10000</param-value>
+         </init-param>
+        <!--<init-param>-->
+             <!--<param-name>test</param-name>-->
+             <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>0</load-on-startup>-->
+    </servlet>
+
+    <!--<servlet>-->
+        <!--<servlet-name>dataServletDelay</servlet-name>-->
+        <!--<servlet-class>DataServletDelayCons</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>dsName</param-name>-->
+            <!--<param-value>jdbc/dbc</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>test</param-name>-->
+            <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+        <!--&lt;!&ndash;<load-on-startup>0</load-on-startup> &ndash;&gt;-->
+    <!--</servlet>-->
+
+
+    <!--<servlet>-->
+        <!--<servlet-name>dataServletDCons</servlet-name>-->
+        <!--<servlet-class>DataServletDCons</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>dsName</param-name>-->
+            <!--<param-value>jdbc/dbc</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+             <!--<param-name>test</param-name>-->
+             <!--<param-value>true</param-value>-->
+         <!--</init-param>-->
+       <!--<load-on-startup>0</load-on-startup>-->
+    <!--</servlet>-->
+
+
+
+
+    <servlet>
+        <servlet-name>dataServletWK2</servlet-name>
+        <servlet-class>com.mwlib.tablo.test.tpolg.DataServletWK2</servlet-class>
+        <init-param>
+             <param-name>test</param-name>
+             <param-value>true</param-value>
+         </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+
+
+
+
+    <!--<servlet>-->
+        <!--<servlet-name>dataServletPlacesCons</servlet-name>-->
+        <!--<servlet-class>DataServletPlacesCons</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>dsName</param-name>-->
+            <!--<param-value>jdbc/dbc</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>test</param-name>-->
+            <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>0</load-on-startup>-->
+    <!--</servlet>-->
+
+
+    <servlet>
+        <servlet-name>CommonServletCons</servlet-name>
+        <servlet-class>com.mwlib.tablo.servlets.CommonServletCons</servlet-class>
+        <init-param>
+             <param-name>period</param-name>
+             <param-value>10000</param-value>
+         </init-param>
+         <init-param>
+             <param-name>test</param-name>
+             <param-value>true</param-value>
+         </init-param>
+         <load-on-startup>0</load-on-startup>
+    </servlet>                               
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.mwlib.tablo.servlets.AdminServlet</servlet-class>
+    </servlet>
+
+
+
+    <!-- Servlets -->
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin/exec</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>greetServlet</servlet-name>
+      <servlet-class>com.mycompany.server.BuildTreeServiceImpl</servlet-class>
+        <init-param>
+            <param-name>firstRestartHour</param-name>
+            <param-value>14</param-value>
+        </init-param>
+        <init-param>
+            <param-name>restartHoursPeriod</param-name>
+            <param-value>1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>restartEnabled</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthorizationServlet</servlet-name>
+        <servlet-class>com.mwlib.tablo.servlets.AuthorizationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExportServlet</servlet-name>
+        <servlet-class>com.mwlib.tablo.servlets.ExportServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>greetServlet</servlet-name>
+      <url-pattern>/helloworld/greet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthorizationServlet</servlet-name>
+        <url-pattern>/transport/auth</url-pattern>
+    </servlet-mapping>
+
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>dataServletWK</servlet-name>-->
+        <!--<url-pattern>/transport/tdata2_old</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <servlet-mapping>
+        <servlet-name>dataServletWK2</servlet-name>
+        <url-pattern>/transport/tdata2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>dataServletH</servlet-name>
+        <url-pattern>/transport/hdata2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ExportServlet</servlet-name>
+        <url-pattern>/transport/export</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <!--<servlet-name>dataServletDCons</servlet-name>-->
+        <servlet-name>CommonServletCons</servlet-name>
+        <url-pattern>/transport/dataCons</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <!--<servlet-name>dataServletPlacesCons</servlet-name>-->
+        <servlet-name>CommonServletCons</servlet-name>
+        <url-pattern>/transport/dataPlacesCons</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <!--<servlet-name>dataServletDelay</servlet-name>-->
+        <servlet-name>CommonServletCons</servlet-name>
+        <url-pattern>/transport/dataDelayCons</url-pattern>
+    </servlet-mapping>
+
+
+
+    <listener>
+        <listener-class>com.mwlib.tablo.HttpSessionCollector</listener-class>
+    </listener>
+
+</web-app>

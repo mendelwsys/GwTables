@@ -1,0 +1,72 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=8" />
+
+    <title>Визуализатор данных</title>
+
+
+    <link type="text/css" rel="stylesheet" href="HelloWorld.css">
+      <script>var isomorphicDir = "helloworld/sc/"</script>
+      <script src=helloworld/sc/modules/ISC_Core.js></script>
+
+      <script src=helloworld/sc/modules/ISC_Foundation.js></script>
+      <script src=helloworld/sc/modules/ISC_Containers.js></script>
+      <script src=helloworld/sc/modules/ISC_Grids.js></script>
+      <script src=helloworld/sc/modules/ISC_Forms.js></script>
+      <script src=helloworld/sc/modules/ISC_RichTextEditor.js></script>
+      <script src=helloworld/sc/modules/ISC_Calendar.js></script>
+
+      <script>
+          //Url = {
+          //   get get() {
+          //var vars = {};
+          ///  if (window.location.search.length !== 0)
+          //    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+          //   key = decodeURIComponent(key);
+          //  if (typeof vars[key] === "undefined") {
+          //     vars[key] = decodeURIComponent(value);
+          //              }
+          //              else {
+          //                  vars[key] = [].concat(vars[key], decodeURIComponent(value));
+          //              }
+          //          });
+          //      return vars;
+          //  }
+          /// };
+
+          function S_GET_PARAM(id) {
+              var a = new RegExp(id + "=([^&#=]*)");
+              var a2 = new RegExp(id);
+
+              if (window.location.search.length > 0) {
+                  if (a2.exec(window.location.search) != null && a2.exec(window.location.search)[0] == id) return id;
+                  else return null;
+              }
+              else
+                  return null;
+          }
+
+
+          var skin = S_GET_PARAM('skin');//Url.get.skin;
+          if (!(skin != null && skin != undefined)) skin = "Enterprise";
+          else
+              skin = "Simplicity";
+          document.write("<" + "script src=helloworld/sc/skins/"
+          + skin + "/load_skin.js><" + "/script>");
+
+
+      </script>
+
+      <script src=helloworld/sc/modules/ISC_DataBinding.js></script>
+<script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript" language="javascript" src="helloworld/helloworld.nocache.js"></script>
+  </head>
+
+  <body>
+
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+
+  </body>
+</html>

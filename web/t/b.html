@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Click the button to display this window's height and width (NOT including toolbars and scrollbars).</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+
+window.moveTo(0,0)
+window.resizeTo(1000,1000); 
+
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+x = document.getElementById("demo");
+x.innerHTML="Width: " + w + " Heigth: " + h;
+
+pageHeight = document.getElementById('demo').offsetHeight;
+//pageWidth = document.getElementById('demo').offsetWidth;
+
+alert(pageHeight);
+//alert(pageWidth);
+}
+
+</script>
+
+</body>
+</html>

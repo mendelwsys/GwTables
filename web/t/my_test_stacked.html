@@ -1,0 +1,66 @@
+<!--[if IE 7]>
+<!DOCTYPE>
+<html lang="en">
+<head>
+<![endif]-->
+<!--[if IE 8]>
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+<![endif]-->
+<![if gte IE 9]>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <![endif]>
+    <link rel="stylesheet" href="../dojo/1.10.4/dijit/themes/tundra/tundra.css">
+    <script type="text/javascript" src="../dojo/1.10.4/dojo/dojo.js"
+            data-dojo-config="async: true, isDebug: true"></script>
+    <script type="text/javascript">
+
+        require(["dojo/ready", "dojox/charting/Chart", "dojox/charting/widget/Legend", "dojox/charting/axis2d/Default",
+                    "dojox/charting/plot2d/StackedAreas", "dojox/charting/plot2d/StackedLines", "dojox/charting/plot2d/StackedColumns",
+                    "dojox/charting/plot2d/StackedBars"],
+                function (ready, Chart, Legend, Default, StackedAreas, StackedLines, StackedColumns, StackedBars) {
+
+                    ready(function () {
+                        // StackedColumns, array of numbers
+                        var chart6 = new Chart("StackedColumns_numbers");
+                        chart6.addAxis("x", {fixLower: "major", fixUpper: "major"});
+                        chart6.addAxis("y", {
+                            vertical: true,
+                            fixLower: "minor",
+                            fixUpper: "minor",
+                            natural: true,
+                            includeZero: true
+                        });
+                        chart6.addPlot("default", {type: StackedColumns, gap: 5});
+                        chart6.addSeries("Series A", [1, 2, 3, 4, 5], {fill: "red"});
+                        chart6.addSeries("Series B", [5, 4, 3, 2, 1], {fill: "blue"});
+                        chart6.connectToPlot("default", function (evt) {
+                            var type = evt.type;
+                            if (type == "onclick") alert(evt.run.name);
+                        });
+                        chart6.render();
+                        new Legend({chart: chart6, horizontal: true}, "StackedColumns_numbers_l");
+
+                    });
+                });
+    </script>
+</head>
+<body class="tundra">
+<table>
+    <tr>
+        <td>
+            <div id="StackedColumns_objects" style="width: 400px; height: 200px;"></div>
+            <div id="StackedColumns_objects_l"></div>
+        </td>
+        <td>
+            <div id="StackedColumns_numbers" style="width: 400px; height: 200px;"></div>
+            <div id="StackedColumns_numbers_l"></div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

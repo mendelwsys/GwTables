@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--  <script src="https://js.cx/test/libs.js"></script> -->
+<!--  <script src="test.js"></script> -->
+</head>
+<body>
+
+  <script>
+
+    var calculator = {
+      sum: function() {
+        return this.a + this.b;
+      },
+    
+      mul: function() {
+        return this.a * this.b;
+      },
+    
+      read: function() {
+        this.a = +prompt('a?', 0);
+        this.b = +prompt('b?', 0);
+	return this;
+      }
+    }
+
+   alert(calculator.read().mul());
+
+  </script>
+
+</body>
+</html>

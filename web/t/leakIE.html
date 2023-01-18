@@ -1,0 +1,53 @@
+<html>
+<head>
+<script type="text/javascript">
+
+    function leak1() {
+        var node = document.getElementById("TO_AREA");
+        node.innerHTML = "<img>";
+        node.innerHTML = "";
+        node = null;
+    }
+
+    function leak2()
+    {
+    var node = document.getElementById("FROM_AREA").cloneNode(true);
+    node.id = "NEW_AREA";
+    document.body.appendChild(node);
+    document.body.removeChild(node);
+    node = null;
+   }
+
+
+function leak4() {
+    var node = document.createElement("IMG");
+    document.body.appendChild(node);
+    document.body.removeChild(node);
+}
+
+function LeakMemory()
+{
+    for (i=0;i<320000;i++)
+//        for (j=0;j<10;j++)
+    {
+        leak1();
+        leak4();
+    }
+
+
+}
+
+</script>
+</head>
+<body>
+<input type="button"
+       value="Memory Leaking Insert 3" onclick="LeakMemory()" />
+</body>
+
+<span>
+<div id='TO_AREA'/>
+<div id='FROM_AREA'/>
+</span>
+
+</html>
+

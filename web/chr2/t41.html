@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=8" />
+		<title>Demo: Columns - Monthly Sales with Highlights</title>
+        <link rel="stylesheet" href="/dojo/1.10.4/dijit/themes/claro/claro.css" media="screen">
+        <style>
+        /*.dojoxLegendNode {border: 1px solid #ccc; margin: 5px 10px 5px 10px; padding: 3px}*/
+        /*.dojoxLegendText {vertical-align: text-top; padding-right: 10px}*/
+        </style>
+	</head>
+
+	<body class="claro">
+		<h1>Demo: Columns9 </h1>
+
+		<div id="chartNode" style="width:800px;height:200px;"></div>
+        <div id="legend3"></div>
+		<!-- load dojo and provide config via data attribute -->
+		<script src="/dojo/1.10.4/dojo/dojo.js"></script>
+        <script>
+               function testIt(chart,chartData0,chartData)
+               {
+
+                   var startNumber = 0;
+                   var interval = setInterval(function()
+                   {
+
+                   var width=800;
+                   var height=200;
+
+                   if (startNumber%20==0)
+                   {
+                       for (var i = 0; i < chartData.length; i++) {
+                           chartData[i]=chartData0[i];
+                       }
+                      chart.resize(width,height);
+                      startNumber=0;
+                   }
+                   else
+                   {
+                       for (i = 0; i < chartData.length; i++) {
+                           if (startNumber % 2 == 0)
+                               chartData[i] -= Math.ceil(Math.random() * 2000);
+                           else
+                               chartData[i] += Math.ceil(Math.random() * 2000);
+                       }
+
+//           var elem=document.getElementById("chartNode");
+
+
+//            elem.style.width=(width-startNumber*10)+"px"
+//            elem.style.height=(height+startNumber*10)+"px"
+
+                      chart.resize((width - startNumber * 10), (height + startNumber * 10));
+                   }
+
+                   chart.updateSeries("Monthly Sales",chartData);
+                   chart.render();
+
+                   startNumber++;
+               },100);
+
+               }
+        </script>
+
+        <script>
+
+		require([
+			 // Require the basic chart class
+			"dojox/charting/Chart",
+
+			// Require the theme of our choosing
+			"dojox/charting/themes/PlotKit/green",
+
+			// Charting plugins:
+			// 	We want to plot Columns
+			//"dojox/charting/plot2d/Columns",
+            "dojox/charting/plot2d/ClusteredColumns",
+            //"dojox/charting/plot2d/Bars"
+
+//            "dojox/charting/action2d/MouseZoomAndPan",
+
+			// Retrieve the Legend, Tooltip, and MoveSlice classes
+			"dojox/charting/action2d/Tooltip",
+//			"dojox/charting/action2d/MoveSlice",
+
+			// Require the highlighter
+			"dojox/charting/action2d/Highlight",
+
+            "dojox/charting/widget/Legend",
+
+            "dojo/store/Observable", "dojo/store/Memory", "dojox/charting/StoreSeries",
+
+			//	We want to use Markers
+			"dojox/charting/plot2d/Markers",
+
+			//	We'll use default x/y axes
+			"dojox/charting/axis2d/Default",
+
+            "dojox/charting/plot2d/Grid",
+
+
+			// Wait until the DOM is ready
+			"dojo/domReady!"
+		], function(Chart, theme, ColumnsPlot,
+//                    MouseZoomAndPan,
+                    Tooltip,
+//                    MoveSlice
+                    Highlight, Legend,Observable,Memory, StoreSeries
+                ) {
+
+			// Define the data
+            var chartData0 = [10000,9200,11811,12000,7662,13887,14200,12222,12000,10009,11288,12099,10000,9200,11811,12000,7662,13887,14200,12222,12000,10009,11288,12099];
+			var chartData = [10000,9200,11811,12000,7662,13887,14200,12222,12000,10009,11288,12099,10000,9200,11811,12000,7662,13887,14200,12222,12000,10009,11288,12099];
+
+			// Create the chart within it's "holding" node
+			var chart = new Chart("chartNode");
+
+			// Set the theme
+			chart.setTheme(theme);
+
+			// Add the only/default plot
+			chart.addPlot("default", {
+				type: ColumnsPlot,
+				markers: true,
+				gap: 10
+			});
+
+			// Add axes
+			chart.addAxis("x",{ microTickStep: 1, minorTickStep: 1, max: 20 });
+			chart.addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major" });
+
+            chart.addPlot("grid", {type: "Grid"});
+			// Add the series of data
+			chart.addSeries("Monthly Sales",chartData,{stroke: {color: "black"}, fill: "red"});
+                                                                                         //,{stroke: {color: "black"}, fill: "blue"},{stroke: {color: "black"}, fill: "red"}
+
+//            new MouseZoomAndPan(chart, "default", { axis: "y"});
+
+			// Create the tooltip
+			var tip = new Tooltip(chart,"default");
+
+            // Create the slice mover
+//			var mag = new MoveSlice(chart,"default");
+
+//			Highlight!
+			new Highlight(chart,"default",{
+		        highlight: "gold"
+	        });
+
+			// Render the chart!
+			chart.render();
+            var legend3 = new Legend({chart: chart, horizontal: false}, "legend3");
+            testIt(chart,chartData0,chartData);
+
+		});
+		</script>
+
+	</body>
+</html>

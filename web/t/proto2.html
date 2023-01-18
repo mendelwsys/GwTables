@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <script>
+
+
+	function extend(Child, Parent) 
+	{
+	    var F = function() { }
+	    F.prototype = Parent.prototype
+	    Child.prototype = new F()
+
+//            Child.prototype.__proto__ === Parent.prototype
+// После того как инициализирован объект child
+// child.__proto__===Child.prototype и значит  child.__proto__.__proto__===Parent.prototype
+
+
+
+	    Child.prototype.constructor = Child
+	    Child.superclass = Parent.prototype
+	};
+
+
+	function Animal()
+	{
+	   this.X=0;
+	   this.Y=0;
+	   this.arr= new Array();
+	   this.eat = function( o )
+		{
+		arr.push(o);
+		}
+	};
+
+	Animal.prototype.fx=function()
+	{
+	   return '1';
+	}
+
+
+	function Rabbit()
+	{
+		Rabbit.superclass.constructor.apply(this, arguments)
+		this.run = function(dx,dy)
+		{
+			this.X+=dx;
+			this.Y+=dy;
+			return this;
+		};
+	};
+	
+	function Bird()
+	{
+		Bird.superclass.constructor.apply(this, arguments)
+		this.fly = function(dx,dy)
+		{
+			this.X-=dx;
+			this.Y-=dy;
+			return this;
+		};
+	};
+
+
+	extend(Rabbit, Animal)
+	extend(Bird, Animal)
+
+
+	var rabbit = new Rabbit();
+
+	alert(rabbit.fx());	
+
+	var bird = new Bird();
+	
+//	rabbit.run(2,3);
+//	alert(	bird.X);
+
+	
+
+  </script>
+
+</body>
+</html>
