@@ -15,7 +15,9 @@ Main functionality:
 Demo video (RU) is available at https://cloud.mail.ru/public/DkQg/X4tPN2wxn
 
 To build the project, you need gwt-2.4.0 and smartgwt-5.0p
+Dojo 1.10.4 is used to display graphs
 Library paths must be edited in build.properties build.xml.
+You also need to unpack the ./web/dojo_unpack_it_here.zip file into the ./web folder
 
 The libraries themselves can be downloaded:
 smartgwt-5.0p link: https://cloud.mail.ru/public/ivyc/LmXGdmyCR

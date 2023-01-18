@@ -26,236 +26,7 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93ebd71c-ae12-4491-a8cc-47c84576bf39" name="Default" comment="web commit">
-      <change afterPath="$PROJECT_DIR$/web/CommonConsHeader.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/DataViewer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/HelloWorld.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/HelloWorld.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/HelloWorldD.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr/cr.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr/cr2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr/dollar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t41.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/t6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf2_bu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf3.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/chr2/tf4.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/consolidate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/data.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/ajaxloadingbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/bottom-titlebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/button_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/button_close_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/left-titlebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/minimize.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/minimize_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/right-titlebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/target.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/top-titlebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/img/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/js/html5shiv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/js/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/js/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/js/require.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/desktop/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dojo_unpack_it_here.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/getJavaCode.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/deploy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/fedit/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/fedit/comment_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/fedit/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gid/arrow_open.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gid/double_arrow_down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gid/double_arrow_up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gid/download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gid/transfer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/h_resizer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/headerIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_BL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_BR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_L.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_T.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_TL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_TR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/inf_borders/edge_borderImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/cascade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/error.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/minimize.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/ok.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_b.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_g.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_g_ob.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_gr.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_r.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_w.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_y.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/semafor_y_ob.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/view.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/warn.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/info/zoom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pred1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pred1_Over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ref/remove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/service/ipod_cast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/service/lightning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/service/link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/service/lorry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/arrow_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/arrow_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/basket_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/opener_closed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/opener_opened.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stripp/vcard_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/sync.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/target.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_cascade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_double.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_form_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_form_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_form_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_form_magnify.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_get.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_go.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_lightning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_osx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_osx_terminal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_put.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_side_boxes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_side_contract.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_side_expand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_side_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_side_tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_split.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_tile_horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_tile_vertical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_view_columns.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_view_detail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_view_gallery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_view_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_view_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_view_tile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_xp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/application_xp_terminal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/toolicons/headerIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/viol/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/viol/error_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/vsplit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/vthumb_grip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/vthumb_start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/bo.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/bo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/bso.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/bso.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/fog.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/fog.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/gololed.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/gololed.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/grad.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/grad.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/groz.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/groz.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/izm.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/izm.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/izm1.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/izm1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/metel.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/metel.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/nodata.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/nodata.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/pozem.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/pozem.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/rain.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/rain.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/shkval.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/shkval.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/snow.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/snow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/snowrain.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/snowrain.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/strongrain.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/strongrain.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/strongsnow.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/strongsnow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/strongwind.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/strongwind.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/torn.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/torn.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/weakrain.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/weakrain.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/weaksnow.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/weaksnow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/werystrongrain.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/werystrongrain.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/werystrongsnow.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/werystrongsnow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/wind.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/w/wind.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/warn/exclamation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/win/time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/win/time_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/win/time_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/win/time_go.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/inf.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/inf_templ.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jquery-1.11.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jquery-migrate-1.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/smil.user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/ahash.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/b.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/c.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/d.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leak1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/leakIE5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/my_test_stacked.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/proto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/proto2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/proto3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/t.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/table_sample.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/test6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/ua.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/ua1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/t/ua2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/thead.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/theadDesc.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="93ebd71c-ae12-4491-a8cc-47c84576bf39" name="Default" comment="lib commit2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -2702,7 +2473,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674041324714</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="web commit">
+      <created>1674041408225</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041408225</updated>
+    </task>
+    <task id="LOCAL-00005" summary="lib commit1">
+      <created>1674041595217</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041595217</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lib commit2">
+      <created>1674041664545</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041664545</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2771,7 +2563,9 @@
     <MESSAGE value="libs Commit" />
     <MESSAGE value="idea files Commit" />
     <MESSAGE value="web commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="web commit" />
+    <MESSAGE value="lib commit1" />
+    <MESSAGE value="lib commit2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lib commit2" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="VssConfiguration">
