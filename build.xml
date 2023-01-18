@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="gwtables" default="all">
+  
+  
+  <property file="build.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+    <exclude name="**/*.rbc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.klib"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.zip"/>
+    <include name="*.ane"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <include name="**/?*.properties"/>
+    <include name="**/?*.xml"/>
+    <include name="**/?*.gif"/>
+    <include name="**/?*.png"/>
+    <include name="**/?*.jpeg"/>
+    <include name="**/?*.jpg"/>
+    <include name="**/?*.html"/>
+    <include name="**/?*.dtd"/>
+    <include name="**/?*.tld"/>
+    <include name="**/?*.ftl"/>
+    <include name="**/?*.db"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.common.classpath">
+    <pathelement location="${basedir}/libs/gson-1.7.1.jar"/>
+  </path>
+  
+  <path id="library.gwt-user_(2).classpath">
+    <pathelement location="${basedir}/../../gwt/gwt-2.4.0/gwt-user.jar"/>
+  </path>
+  
+  <path id="library.poi3.11.classpath">
+    <pathelement location="${basedir}/libs/poi-3.11-20141221.jar"/>
+    <pathelement location="${basedir}/libs/poi-excelant-3.11-20141221.jar"/>
+    <pathelement location="${basedir}/libs/poi-ooxml-3.11-20141221.jar"/>
+    <pathelement location="${basedir}/libs/poi-ooxml-schemas-3.11-20141221.jar"/>
+    <pathelement location="${basedir}/libs/poi-scratchpad-3.11-20141221.jar"/>
+  </path>
+  
+  
+  <!-- Global Libraries -->
+    
+  <path id="library.gwtvis.classpath">
+    <pathelement location="${basedir}/../../gwt/gwt-visualization-1.1.2/gwt-visualization.jar"/>
+  </path>
+  
+  <path id="library.servlet-api.classpath">
+    <pathelement location="${basedir}/libs/web/jsp-api.jar"/>
+    <pathelement location="${basedir}/libs/web/servlet-api.jar"/>
+  </path>
+  
+  <path id="library.smartgwt50.classpath">
+    <pathelement location="${basedir}/../../gwt/smartgwt-5.0p/smartgwt-skins.jar"/>
+    <pathelement location="${basedir}/../../gwt/smartgwt-5.0p/smartgwt.jar"/>
+  </path>
+  
+  
+  <!-- Application Server Libraries -->
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module GwTables -->
+  
+  <dirname property="module.gwtables.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.gwtables" value="${jdk.home.1.8}"/>
+  <property name="module.jdk.bin.gwtables" value="${jdk.bin.1.8}"/>
+  <property name="module.jdk.classpath.gwtables" value="jdk.classpath.1.8"/>
+  
+  <property name="compiler.args.gwtables" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="gwtables.output.dir" value="${module.gwtables.basedir}/out/product/GwTables"/>
+  <property name="gwtables.testoutput.dir" value="${module.gwtables.basedir}/out/test/GwTables"/>
+  
+  <path id="gwtables.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="gwtables.module.production.classpath">
+    <path refid="${module.jdk.classpath.gwtables}"/>
+    <path refid="library.common.classpath"/>
+    <path refid="library.servlet-api.classpath"/>
+    <path refid="library.poi3.11.classpath"/>
+    <path refid="library.gwtvis.classpath"/>
+    <path refid="library.smartgwt50.classpath"/>
+    <path refid="library.gwt-user_(2).classpath"/>
+  </path>
+  
+  <path id="gwtables.runtime.production.module.classpath">
+    <pathelement location="${gwtables.output.dir}"/>
+    <path refid="library.common.classpath"/>
+    <path refid="library.poi3.11.classpath"/>
+    <path refid="library.gwtvis.classpath"/>
+    <path refid="library.smartgwt50.classpath"/>
+    <path refid="library.gwt-user_(2).classpath"/>
+  </path>
+  
+  <path id="gwtables.module.classpath">
+    <path refid="${module.jdk.classpath.gwtables}"/>
+    <pathelement location="${gwtables.output.dir}"/>
+    <path refid="library.common.classpath"/>
+    <path refid="library.servlet-api.classpath"/>
+    <path refid="library.poi3.11.classpath"/>
+    <path refid="library.gwtvis.classpath"/>
+    <path refid="library.smartgwt50.classpath"/>
+    <path refid="library.gwt-user_(2).classpath"/>
+  </path>
+  
+  <path id="gwtables.runtime.module.classpath">
+    <pathelement location="${gwtables.testoutput.dir}"/>
+    <pathelement location="${gwtables.output.dir}"/>
+    <path refid="library.common.classpath"/>
+    <path refid="library.poi3.11.classpath"/>
+    <path refid="library.gwtvis.classpath"/>
+    <path refid="library.smartgwt50.classpath"/>
+    <path refid="library.gwt-user_(2).classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.gwtables">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.gwtables">
+    <patternset refid="excluded.from.module.gwtables"/>
+  </patternset>
+  
+  <path id="gwtables.module.sourcepath">
+    <dirset dir="${module.gwtables.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.gwtables" depends="compile.module.gwtables.production,compile.module.gwtables.tests" description="Compile module GwTables"/>
+  
+  <target name="compile.module.gwtables.production" description="Compile module GwTables; production classes">
+    <mkdir dir="${gwtables.output.dir}"/>
+    <javac destdir="${gwtables.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.gwtables}/javac">
+      <compilerarg line="${compiler.args.gwtables}"/>
+      <bootclasspath refid="gwtables.module.bootclasspath"/>
+      <classpath refid="gwtables.module.production.classpath"/>
+      <src refid="gwtables.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.gwtables"/>
+    </javac>
+    
+    <copy todir="${gwtables.output.dir}">
+      <fileset dir="${module.gwtables.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.gwtables.tests" depends="compile.module.gwtables.production" description="compile module GwTables; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.gwtables" description="cleanup module">
+    <delete dir="${gwtables.output.dir}"/>
+    <delete dir="${gwtables.testoutput.dir}"/>
+  </target>
+  
+  <property name="gwt.compiler.output.gwtables" value="${module.gwtables.basedir}/GWTCompilerOutput_gwtables"/>
+  
+  <!-- Run GWT compiler for GWT module ${gwt.module.name} -->
+  <target name="run.gwt.compiler.gwtables" description="Run GWT compiler">
+    <java fork="true" jvm="${module.jdk.bin.gwtables}/java" classname="com.google.gwt.dev.Compiler" failonerror="true">
+      <jvmarg line="-Xmx1024m"/>
+      <classpath>
+        <pathelement location="${gwt.sdk.home.gwtables}/gwt-dev.jar"/>
+        <path refid="gwtables.module.sourcepath"/>
+        <path refid="gwtables.module.classpath"/>
+      </classpath>
+      <arg value="-logLevel"/>
+      <arg value="WARN"/>
+      <arg value="-war"/>
+      <arg value="${gwt.compiler.output.gwtables}"/>
+      <arg value="-style"/>
+      <arg value="DETAILED"/>
+      <arg value="${gwt.module.name}"/>
+    </java>
+  </target>
+  
+  <target name="compile.gwt.gwtables" depends="compile.module.gwtables" description="Compile all GWT modules in module GwTables">
+    <property name="gwt.sdk.home.gwtables" value="${gwt.sdk.home}"/>
+    <antcall target="run.gwt.compiler.gwtables">
+      <param name="gwt.module.name" value="com.mycompany.HelloWorld"/>
+    </antcall>
+  </target>
+  
+  <target name="clean.gwt.compiler.output" description="Clean GWT Compiler output directories">
+    <delete dir="${gwt.compiler.output.gwtables}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.gwtables, clean.artifact.gwtables_war_exploded, clean.gwt.compiler.output" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.gwt.gwtables" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.GwTables_war_exploded" value="${basedir}/out/artifacts/GwTables_war_exploded"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="clean.artifact.gwtables_war_exploded" description="clean GwTables_war exploded artifact output">
+    <delete dir="${artifact.output.GwTables_war_exploded}"/>
+  </target>
+  
+  <target name="artifact.gwtables_war_exploded" depends="init.artifacts, compile.module.gwtables" description="Build &#39;GwTables_war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.GwTables_war_exploded}"/>
+    <copy todir="${artifact.output.GwTables_war_exploded}">
+      <fileset dir="${basedir}/web"/>
+    </copy>
+    <mkdir dir="${artifact.output.GwTables_war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/web/WEB-INF/web.xml" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/web.xml"/>
+    <mkdir dir="${artifact.output.GwTables_war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.GwTables_war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.GwTables_war_exploded}/WEB-INF/classes">
+      <fileset dir="${gwtables.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.GwTables_war_exploded}/WEB-INF/lib"/>
+    <copy file="${basedir}/libs/gson-1.7.1.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/gson-1.7.1.jar"/>
+    <copy file="${basedir}/libs/poi-scratchpad-3.11-20141221.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/poi-scratchpad-3.11-20141221.jar"/>
+    <copy file="${basedir}/libs/poi-excelant-3.11-20141221.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/poi-excelant-3.11-20141221.jar"/>
+    <copy file="${basedir}/libs/poi-ooxml-schemas-3.11-20141221.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/poi-ooxml-schemas-3.11-20141221.jar"/>
+    <copy file="${basedir}/libs/poi-ooxml-3.11-20141221.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/poi-ooxml-3.11-20141221.jar"/>
+    <copy file="${basedir}/libs/poi-3.11-20141221.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/poi-3.11-20141221.jar"/>
+    <copy file="${basedir}/../../gwt/gwt-visualization-1.1.2/gwt-visualization.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/gwt-visualization.jar"/>
+    <copy file="${basedir}/../../gwt/smartgwt-5.0p/smartgwt.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/smartgwt.jar"/>
+    <copy file="${basedir}/../../gwt/smartgwt-5.0p/smartgwt-skins.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/smartgwt-skins.jar"/>
+    <copy file="${basedir}/../../gwt/gwt-2.4.0/gwt-servlet.jar" tofile="${artifact.output.GwTables_war_exploded}/WEB-INF/lib/gwt-servlet.jar"/>
+    <copy todir="${artifact.output.GwTables_war_exploded}">
+      <fileset dir="${gwt.compiler.output.gwtables}"/>
+    </copy>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.gwtables_war_exploded" description="Build all artifacts">
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

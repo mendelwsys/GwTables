@@ -1,0 +1,6 @@
+# Project exclude paths
+/db/
+/dev_docs/
+/gwt-unitCache/
+/GWTCompilerOutput_gwtables/
+/out/

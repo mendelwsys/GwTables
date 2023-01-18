@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://auth.vniias" xmlns:impl="http://auth.vniias" xmlns:intf="http://auth.vniias" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema targetNamespace="http://auth.vniias" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getUsersByProgResponse">
+    <complexType>
+     <sequence>
+      <element name="getUsersByProgReturn" nillable="true" type="impl:ArrayOfUserInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="login2">
+    <complexType>
+     <sequence>
+      <element name="user" nillable="true" type="xsd:string"/>
+      <element name="pwd" nillable="true" type="xsd:string"/>
+      <element name="ip" nillable="true" type="xsd:string"/>
+      <element name="id_prog" type="xsd:int"/>
+      <element name="client_version" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="login2Response">
+    <complexType>
+     <sequence>
+      <element name="login2Return" nillable="true" type="impl:UserInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProgsIdByUser">
+    <complexType>
+     <sequence>
+      <element name="login" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProgsIdByUserResponse">
+    <complexType>
+     <sequence>
+      <element name="getProgsIdByUserReturn" nillable="true" type="impl:ArrayOf_xsd_nillable_int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="login">
+    <complexType>
+     <sequence>
+      <element name="user" nillable="true" type="xsd:string"/>
+      <element name="pwd" nillable="true" type="xsd:string"/>
+      <element name="id_prog" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loginResponse">
+    <complexType>
+     <sequence>
+      <element name="loginReturn" nillable="true" type="impl:UserInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSystemUpdateInfo">
+    <complexType>
+     <sequence>
+      <element name="user" nillable="true" type="xsd:string"/>
+      <element name="pass" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSystemUpdateInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getSystemUpdateInfoReturn" nillable="true" type="impl:ArrayOfUpdateInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProgsIdByUserPwd">
+    <complexType>
+     <sequence>
+      <element name="login" nillable="true" type="xsd:string"/>
+      <element name="pwd" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProgsIdByUserPwdResponse">
+    <complexType>
+     <sequence>
+      <element name="getProgsIdByUserPwdReturn" nillable="true" type="impl:ArrayOf_xsd_nillable_int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUsersByProg">
+    <complexType>
+     <sequence>
+      <element name="id_prog" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UserInfo">
+    <sequence>
+     <element name="remoteHost" nillable="true" type="xsd:string"/>
+     <element name="pwdDb" nillable="true" type="xsd:string"/>
+     <element name="userDb" nillable="true" type="xsd:string"/>
+     <element name="roles" nillable="true" type="xsd:string"/>
+     <element name="dolId" type="xsd:int"/>
+     <element name="dorKod" type="xsd:int"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="idLevel" type="xsd:int"/>
+     <element name="idPers" type="xsd:int"/>
+     <element name="idPredType" type="xsd:int"/>
+     <element name="idUser" type="xsd:int"/>
+     <element name="idXoz" type="xsd:int"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+     <element name="middleName" nillable="true" type="xsd:string"/>
+     <element name="otdelId" type="xsd:int"/>
+     <element name="podrId" type="xsd:int"/>
+     <element name="predId" type="xsd:int"/>
+     <element name="stanId" type="xsd:int"/>
+     <element name="userMessage" nillable="true" type="xsd:string"/>
+     <element name="aliasDb" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfUserInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="UserInfo" nillable="true" type="impl:UserInfo"/>
+    </sequence>
+   </complexType>
+   <complexType name="NsiException">
+    <sequence>
+     <element name="message" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="NsiException" nillable="true" type="impl:NsiException"/>
+   <complexType name="InvalidVersionException">
+    <sequence>
+     <element name="message" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="InvalidVersionException" nillable="true" type="impl:InvalidVersionException"/>
+   <complexType name="ArrayOf_xsd_nillable_int">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="int" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="UpdateInfo">
+    <sequence>
+     <element name="definstdir" nillable="true" type="xsd:string"/>
+     <element name="exeName" nillable="true" type="xsd:string"/>
+     <element name="ftp_ip" nillable="true" type="xsd:string"/>
+     <element name="ftp_pass" nillable="true" type="xsd:string"/>
+     <element name="ftp_path" nillable="true" type="xsd:string"/>
+     <element name="ftp_port" type="xsd:int"/>
+     <element name="ftp_un" nillable="true" type="xsd:string"/>
+     <element name="id_prog" type="xsd:int"/>
+     <element name="id_prog_parent" type="xsd:int"/>
+     <element name="instpathkey" nillable="true" type="xsd:string"/>
+     <element name="need_sys" nillable="true" type="xsd:string"/>
+     <element name="proxy_ip" nillable="true" type="xsd:string"/>
+     <element name="proxy_pass" nillable="true" type="xsd:string"/>
+     <element name="proxy_port" type="xsd:int"/>
+     <element name="proxy_un" nillable="true" type="xsd:string"/>
+     <element name="reestr" nillable="true" type="xsd:string"/>
+     <element name="server_type" type="xsd:int"/>
+     <element name="appName" nillable="true" type="xsd:string"/>
+     <element name="ver" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfUpdateInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="UpdateInfo" nillable="true" type="impl:UpdateInfo"/>
+    </sequence>
+   </complexType>
+  </schema>
+  </wsdl:types>
+  <wsdl:message name="login2Request">
+    <wsdl:part element="impl:login2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part element="impl:loginResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidVersionException">
+    <wsdl:part element="impl:InvalidVersionException" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSystemUpdateInfoRequest">
+    <wsdl:part element="impl:getSystemUpdateInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSystemUpdateInfoResponse">
+    <wsdl:part element="impl:getSystemUpdateInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginRequest">
+    <wsdl:part element="impl:login" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProgsIdByUserRequest">
+    <wsdl:part element="impl:getProgsIdByUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProgsIdByUserPwdResponse">
+    <wsdl:part element="impl:getProgsIdByUserPwdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProgsIdByUserPwdRequest">
+    <wsdl:part element="impl:getProgsIdByUserPwd" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NsiException">
+    <wsdl:part element="impl:NsiException" name="fault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUsersByProgResponse">
+    <wsdl:part element="impl:getUsersByProgResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="login2Response">
+    <wsdl:part element="impl:login2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProgsIdByUserResponse">
+    <wsdl:part element="impl:getProgsIdByUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUsersByProgRequest">
+    <wsdl:part element="impl:getUsersByProg" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Auth_service">
+    <wsdl:operation name="getUsersByProg">
+      <wsdl:input message="impl:getUsersByProgRequest" name="getUsersByProgRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getUsersByProgResponse" name="getUsersByProgResponse">
+    </wsdl:output>
+      <wsdl:fault message="impl:NsiException" name="NsiException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login2">
+      <wsdl:input message="impl:login2Request" name="login2Request">
+    </wsdl:input>
+      <wsdl:output message="impl:login2Response" name="login2Response">
+    </wsdl:output>
+      <wsdl:fault message="impl:NsiException" name="NsiException">
+    </wsdl:fault>
+      <wsdl:fault message="impl:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgsIdByUser">
+      <wsdl:input message="impl:getProgsIdByUserRequest" name="getProgsIdByUserRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getProgsIdByUserResponse" name="getProgsIdByUserResponse">
+    </wsdl:output>
+      <wsdl:fault message="impl:NsiException" name="NsiException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="impl:loginRequest" name="loginRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:loginResponse" name="loginResponse">
+    </wsdl:output>
+      <wsdl:fault message="impl:NsiException" name="NsiException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemUpdateInfo">
+      <wsdl:input message="impl:getSystemUpdateInfoRequest" name="getSystemUpdateInfoRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getSystemUpdateInfoResponse" name="getSystemUpdateInfoResponse">
+    </wsdl:output>
+      <wsdl:fault message="impl:NsiException" name="NsiException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgsIdByUserPwd">
+      <wsdl:input message="impl:getProgsIdByUserPwdRequest" name="getProgsIdByUserPwdRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getProgsIdByUserPwdResponse" name="getProgsIdByUserPwdResponse">
+    </wsdl:output>
+      <wsdl:fault message="impl:NsiException" name="NsiException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Auth_serviceSoapBinding" type="impl:Auth_service">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getUsersByProg">
+      <wsdlsoap:operation soapAction="getUsersByProg"/>
+      <wsdl:input name="getUsersByProgRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUsersByProgResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NsiException">
+        <wsdlsoap:fault name="NsiException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login2">
+      <wsdlsoap:operation soapAction="login2"/>
+      <wsdl:input name="login2Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="login2Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NsiException">
+        <wsdlsoap:fault name="NsiException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidVersionException">
+        <wsdlsoap:fault name="InvalidVersionException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgsIdByUser">
+      <wsdlsoap:operation soapAction="getProgsIdByUser"/>
+      <wsdl:input name="getProgsIdByUserRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProgsIdByUserResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NsiException">
+        <wsdlsoap:fault name="NsiException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction="login"/>
+      <wsdl:input name="loginRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NsiException">
+        <wsdlsoap:fault name="NsiException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSystemUpdateInfo">
+      <wsdlsoap:operation soapAction="getSystemUpdateInfo"/>
+      <wsdl:input name="getSystemUpdateInfoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSystemUpdateInfoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NsiException">
+        <wsdlsoap:fault name="NsiException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgsIdByUserPwd">
+      <wsdlsoap:operation soapAction="getProgsIdByUserPwd"/>
+      <wsdl:input name="getProgsIdByUserPwdRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProgsIdByUserPwdResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NsiException">
+        <wsdlsoap:fault name="NsiException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Auth_serviceService">
+    <wsdl:port binding="impl:Auth_serviceSoapBinding" name="Auth_service">
+      <wsdlsoap:address location="http://host_a:port_a/auth_service/services/Auth_service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
